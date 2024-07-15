@@ -1,0 +1,80 @@
+body
+{
+    
+    background-image: url('background.jpg');
+    background-size:cover;
+    background-repeat:repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    cursor: grab;
+}
+
+h1
+{
+    color:black;
+}
+
+.transparent-box 
+
+{
+    flex: 0 0 48%; /* Adjust width as needed, leaving space for margin */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
+    color: #fff; /* Text color on the transparent box */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    height: auto; /* Allow the height to adjust based on content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+button{
+    list-style-type: none;
+    width:500px ;
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards, movement 3s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Set a fixed height for better visual consistency */
+    border-radius: 10px;
+    color: #08f33f;
+    background-color: rgba(0, 0, 0, 0.7); /* Grey background for odd items */
+    align-items: center;
+    justify-content:center;
+    padding: 10px 100px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes movement {
+    from {
+        transform: translateX(-10px);
+    }
+    to {
+        transform: translateX(10px);
+    }
+}
+
